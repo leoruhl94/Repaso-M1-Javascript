@@ -1,0 +1,17 @@
+{
+  "name": "repaso-m1-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "checkpoint.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --verbose --detectOpenHandles"
+  },
+  "author": "Leonardo Ruhl",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.3.1"
+  }
+}
