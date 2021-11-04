@@ -31,8 +31,7 @@ function OrderedLinkedList() {
 
 module.exports = {
   OrderedLinkedList,
-  Queue,
+
   Node,
   LinkedList,
-  BinarySearchTree,
 };

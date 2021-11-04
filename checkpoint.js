@@ -1,5 +1,6 @@
 const {
-    LinkedList
+    LinkedList,
+    Node
 } = require('./DS.js')
 
 function prueba (){
@@ -30,22 +31,7 @@ OLL
 
 */
 
-LinkedList.prototype.add = function (value){
-    let newNode = new Node(value);
-    if(this.head === null){
-        this.head = newNode;
-    } else {
-        let currentNode = this.head;
-        if(currentNode){
-            while(currentNode.next){
-                currentNode = currentNode.next; 
-            }
-            currentNode.next = newNode;
-        }
-    }
-    this.length++;
-    return this;
-}
+
 LinkedList.prototype.remove = function (){
     if(!this.head) return null;
     else if(!this.head.next){
@@ -69,6 +55,9 @@ LinkedList.prototype.remove = function (){
         }
     } 
 }
+
+//retorna el nodo que coincida con el valor si no encuentra retorna null
+// si recibe un cb lo debe aplicar
 LinkedList.prototype.search = function (value){
     let currentNode = this.head;
     while(currentNode){
@@ -118,5 +107,5 @@ LinkedList.prototype.search = function (value){
 
 
 module.exports = {
-    prueba,
+    LinkedList,
 }
