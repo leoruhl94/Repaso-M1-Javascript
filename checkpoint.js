@@ -3,102 +3,78 @@ const {
     Node
 } = require('./DS.js')
 
-function prueba (){
-    return 'probando'
-}
-
-//______________________Recursividad______________________
-
-
-
-
 
 //______________________LinkedLists______________________
 /*
-clase LL y OLL + Clase node
-LL
-->Add
-->append
-->RemoveLast
-->RemoveX (por valor)
-->GetArray
-->Search
+*/
+/*
+*--------------------------------------------------------------*
+                       EJERCICIO 1
+*--------------------------------------------------------------*
 
-OLL
-->Add
-->RemoveX
+Eliminar el ultimo elemento de una Lista Enlazada y devolver su valor.
+Si la lista esta vacia, devolver null.
+*/
 
+LinkedList.prototype.remove = function (){
+  
+}
+
+/*
+*--------------------------------------------------------------*
+                       EJERCICIO 2
+*--------------------------------------------------------------*
+
+Buscar un valor dentro de una Lista Enlazada.
+Si se encuentra el valor, devolver el nodo completo que contiene ese valor.
+Si el valor es una función de callback, debe ejecutarla con el valor de ese nodo.
+Si no se encuentra nada, devolver null.
 
 */
 
 
-LinkedList.prototype.remove = function (){
-    if(!this.head) return null;
-    else if(!this.head.next){
-        let data = this.head.value;
-        this.head = null;
-        this.length--;
-        return data;
-    }else {
-        let currentNode = this.head;
-        let holdingPointer;
-        let data;
-        if(currentNode){
-            while(currentNode.next){
-                holdingPointer = currentNode;
-                currentNode = currentNode.next;
-            }
-            data = currentNode.value;
-            holdingPointer.next = null;
-            this.length--;
-            return data;
-        }
-    } 
-}
-
-//retorna el nodo que coincida con el valor si no encuentra retorna null
-// si recibe un cb lo debe aplicar
 LinkedList.prototype.search = function (value){
-    let currentNode = this.head;
-    while(currentNode){
-        if (typeof value === 'function'){
-            if(value(currentNode.value)===true)
-                return currentNode.value;
-        }  
-        if(currentNode.value === value)
-          return currentNode.value;
-        else   
-            currentNode = currentNode.next;
-        }
-    return null; 
+
 }
 
+/*
+*--------------------------------------------------------------*
+                       EJERCICIO 3
+*--------------------------------------------------------------*
 
+Agregar un nuevo nodo al principio de una Lista Enlazada, sin perder el resto de la lista.
+Retornar la lista entera.
+*/
 
+LinkedList.prototype.append = function(value){
 
+}
 
+/*
+*--------------------------------------------------------------*
+                       EJERCICIO 4
+*--------------------------------------------------------------*
 
-//______________________Queue______________________
+Buscar el nodo que contenga el valor pasado por parametro y removerlo, sin perder el resto de la lista.
+Si se removio correctamente, devolver el valor eliminado.
+Si no existe ese valor en la lista enlazada, devolver null.
+*/
 
+LinkedList.prototype.removeValue = function(value) {
 
+}
 
+/*
+*--------------------------------------------------------------*
+                       EJERCICIO 5
+*--------------------------------------------------------------*
 
+Convertir la lista enlazada en un array con todos sus valores.
+*/
 
-//______________________BST______________________
+LinkedList.prototype.getArray = function(){
 
-
-
-
-
-//______________________Sort______________________
-
-
-
-
-
-//______________________Clousures______________________
-
-
+}
 
 
 
